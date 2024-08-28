@@ -12,6 +12,7 @@ const button = tv({
     variant: {
       primary: ' text-white bg-violet-600 hover:bg-violet-700',
       outline: 'border border-zinc-300 text-zinc-700 hover:bg-zinc-50',
+      ghost: 'rounded-md px-2 hover:bg-zinc-50 shadow-none',
     },
   },
 
@@ -21,7 +22,6 @@ const button = tv({
 })
 
 export type ButtonProps = ComponentProps<'button'> & VariantProps<typeof button>
-// serve para que eu determine a variante diretamente como propriedade do componente
 
 export function Button({ variant, ...props }: ButtonProps) {
   return <button {...props} className={button({ variant })} />
